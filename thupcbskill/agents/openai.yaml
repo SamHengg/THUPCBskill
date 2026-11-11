@@ -1,0 +1,4 @@
+interface:
+  display_name: "THUPCBskill"
+  short_description: "Design and verify rigid boards in EasyEDA Pro"
+  default_prompt: "Use $thupcbskill in EasyEDA Pro. Identify the board and its constraints, then verify the schematic, PCB, and inter-board interfaces by readback."

@@ -1,0 +1,23 @@
+{
+  "pins": {
+    "main.J1.1": {"net": "3V3_MAIN", "function": "SUPPLY", "role": "power_out", "voltage_v": [3.2, 3.4]},
+    "main.J1.2": {"net": "GND_MAIN", "function": "RETURN", "role": "gnd"},
+    "main.J1.3": {"net": "ADC0", "function": "ANALOG", "role": "signal_in"},
+    "main.J1.4": {"net": "ADDR_LOW", "function": "SEL0", "role": "signal_out"},
+    "main.J1.5": {"net": "ADDR_HIGH", "function": "SEL1", "role": "signal_out"},
+    "main.J1.6": {"role": "nc"},
+    "sensor.J2.1": {"role": "nc"},
+    "sensor.J2.2": {"net": "MUX_A1", "function": "SEL1", "role": "signal_in"},
+    "sensor.J2.3": {"net": "MUX_A0", "function": "SEL0", "role": "signal_in"},
+    "sensor.J2.4": {"net": "BUF_OUT", "function": "ANALOG", "role": "signal_out"},
+    "sensor.J2.5": {"net": "GND_SENSE", "function": "RETURN", "role": "gnd"},
+    "sensor.J2.6": {"net": "VCC_SENSOR", "function": "SUPPLY", "role": "power_in", "voltage_v": [3.0, 3.6]}
+  },
+  "wires": [
+    ["main.J1.1", "sensor.J2.6"],
+    ["main.J1.2", "sensor.J2.5"],
+    ["main.J1.3", "sensor.J2.4"],
+    ["main.J1.4", "sensor.J2.3"],
+    ["main.J1.5", "sensor.J2.2"]
+  ]
+}
